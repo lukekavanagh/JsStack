@@ -12,18 +12,31 @@
     "plugins": [
       "import"
     ],
+    "rules": {
+      "new-cap": [
+        2,
+        {
+          "capIsNewExceptions": [
+            "Map",
+            "List"
+          ]
+        }
+      ]
+    },
     "env": {
       "browser": true
     }
   },
   "babel": {
     "presets": [
-      "latest"
+      "latest",
+      "react"
     ]
   },
   "devDependencies": {
     "babel-loader": "^6.2.8",
     "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
     "del": "^2.2.2",
     "eslint": "^3.8.1",
     "eslint-config-airbnb": "^12.0.0",
@@ -36,7 +49,14 @@
     "webpack-stream": "^3.2.0"
   },
   "dependencies": {
-    "babel-polyfill": "^6.16.0"
+    "babel-polyfill": "^6.16.0",
+    "immutable": "^3.8.1",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-redux": "^4.4.6",
+    "redux": "^3.6.0",
+    "redux-actions": "^1.1.0",
+    "redux-immutable": "^3.0.8"
   },
   "repository": "verekia/js-stack-from-scratch",
   "author": "Jonathan Verrecchia - @verekia",
